@@ -7,7 +7,8 @@
     <title>Javascript Notes</title>
     <style>
     body{background-color:rgb(29, 32, 33);text-align: center;}
-    pre{ color: #86b479; font-size: 18px; text-align: center; text-shadow: 4px 4px 4px black;}
+    pre{ color: #86b479; font-size: 18px; text-align:left; text-shadow: 4px 4px 4px black; margin-left: 4%;}
+    div{background-color: black;}
     </style>
 </head>
 
@@ -16,11 +17,12 @@
     <H2 style="color:#86b479; font-size: 40px; text-shadow: 5px 5px 5px black; font-weight: 600;">Javascript Notes</H2>
 
     <pre id="code"></pre>
-    <script>
+<script>
 
        
 
-
+      let x = 2;
+      const you = "me";
 
 
 
@@ -58,15 +60,42 @@
 
 
 
-        // This is the magic. this makes he notes work. Dont fuck it up.
-        // grabbing the script element , getting the code in the script element
-        const scriptElement = document.querySelector("script");
-        const code = scriptElement.textContent;
 
-        // put the code and show it inside the pre element
-        const preElement = document.getElementById("code");
-              preElement.textContent = code;
-    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//___________________________________________________________________________
+
+//This is the magic. this makes the notes work. Dont fuck it up.
+
+//grabbing the script element , getting the code in the script element.
+
+const scriptElement = document.querySelector("script");
+
+const code = scriptElement.textContent;
+
+// put the code and show it inside the pre element.
+
+const preElement = document.getElementById("code");
+
+preElement.textContent = code;
+</script>
 </body>
 </html>
 
