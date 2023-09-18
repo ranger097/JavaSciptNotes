@@ -30,6 +30,7 @@
          text-shadow: 5px 5px 5px #000000;
          margin-left: 4%;border-radius: 20px;
          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         text-wrap: nowrap;
         }
 
         h2{
@@ -56,11 +57,16 @@
 
       let you = "Become a better programmer";
 
+
       let me = "Relax and listen to lofi";
 
       
+       
 
-      console.log(you);
+
+    
+
+
 
 
 
@@ -114,7 +120,7 @@
 
 
 
-
+// Hint: You can log to the console below.-------------------------------------------------------
 
 //_______________________________________________________________________________________________
 
@@ -141,6 +147,7 @@ const originalConsoleLog = console.log;
 console.log = function (message) {
 
 // takes all your code shit and puts it in an array.
+
 outputArray.push(message);
 
 // takes the first console.log (original) and displays it.
@@ -148,9 +155,13 @@ outputArray.push(message);
 originalConsoleLog.apply(console, arguments);
 };
 
-// code 
+//-----------------------------------------------------------------------------------------------
+//-------------------------------Console.log here------------------------------------------------
 
-console.log(you);
+    console.log(you);    // This is to log shit in your console. It will display below.
+
+//-----------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------
 
 // makes a sandwich with my code and your code.
 
