@@ -2,29 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Notes</title>
-    <style>
-    body{background-color:rgb(29, 32, 33);text-align: center;}
-    pre{ color: #86b479; font-size: 18px; text-align:left; text-shadow: 4px 4px 4px black; margin-left: 4%;}
-    div{background-color: black;}
-    </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Javascript Notes</title>
+
+     <style>
+         body{background-color:rgb(29, 32, 33);text-align: center;}
+         pre{color: #86b479; font-size: 18px; text-align:left; text-shadow: 6px 3px 6px rgb(0, 0, 0); margin-left: 4%;}
+         div{color: #86b479; font-size: 18px; text-align:left; text-shadow: 6px 3px 6px rgb(0, 0, 0); margin-left: 4%;}
+     </style>
+
 </head>
 
 <body>
-
-    <H2 style="color:#86b479; font-size: 40px; text-shadow: 5px 5px 5px black; font-weight: 600;">Javascript Notes</H2>
-
-    <pre id="code"></pre>
+    <H2 style="color:#86b479; font-size: 40px; text-shadow: 3px 3px 6px rgb(0, 0, 0); font-weight: 600;">Javascript Notes</H2>
+    <pre id="output"></pre>
+    <!--<pre id="code"></pre>-->
 <script>
 
        
 
-      let x = 2;
-      const you = "me";
+      let you = "Become a better programmer";
 
+      let me = "Relax and listen to lofi";
 
+      
+
+      console.log(you);
 
 
 
@@ -86,18 +90,56 @@
 
 //grabbing the script element , getting the code in the script element.
 
+//get the code in the script tags.
+
 const scriptElement = document.querySelector("script");
 
 const code = scriptElement.textContent;
 
-// put the code and show it inside the pre element.
+// make a container to hold all the input.
 
-const preElement = document.getElementById("code");
+const outputArray = [];
 
-preElement.textContent = code;
+// quick function to override console.log and get the output.
+
+const originalConsoleLog = console.log;
+
+// this code is getting sexy.
+
+console.log = function (message) {
+
+// takes all your code shit and puts it in an array.
+outputArray.push(message);
+
+// takes the first console.log (original) and displays it.
+
+originalConsoleLog.apply(console, arguments);
+};
+
+// code 
+
+console.log(you);
+
+// makes a sandwich with my code and your code.
+
+const combinedOutput = code + `\n` + outputArray.join(`\n`);
+
+// plating the code sandwich, display the combined output in the pre element.
+
+const outputElement = document.getElementById("output");
+
+outputElement.textContent = combinedOutput;
+
+
+//___________________________________________________________________________
+//
+//                        THIS IS THE CONSOLE BRO
+//___________________________________________________________________________
 </script>
 </body>
 </html>
+
+
 
 
 
